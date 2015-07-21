@@ -1,7 +1,7 @@
 {
-  "name": "turbo-javascript",
+  "name": "turbo-javascript-2",
   "main": "./lib/turbo-javascript",
-  "version": "1.1.3",
+  "version": "0.1.0",
   "description": "A collection of commands and snippets for optimizing Javascript development productivity",
   "activationCommands": {
     "atom-text-editor": [
@@ -11,7 +11,7 @@
       "turbo-javascript:wrap-block"
     ]
   },
-  "repository": "https://github.com/extrabacon/atom-turbo-javascript",
+  "repository": "https://github.com/hharnisc/atom-turbo-javascript-2",
   "license": "MIT",
   "private": true,
   "keywords": [

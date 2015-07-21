@@ -1,6 +1,9 @@
 ".source.js":
   "console.log":
-    prefix: "cl"
+    prefix: 'cl'
+    body: """console.log("${1:title}", ${2:$1}$0);"""
+  "console.log(text only)":
+    prefix: "cll"
     body: "console.log(${0});"
   "console.error":
     prefix: "ce"
