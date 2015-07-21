@@ -1,8 +1,8 @@
 {
-  "name": "turbo-javascript-2",
-  "main": "./lib/turbo-javascript",
+  "name": "es6-javascript",
+  "main": "./lib/es6-javascript",
   "version": "0.1.0",
-  "description": "A collection of commands and snippets for optimizing Javascript development productivity",
+  "description": "A collection of commands and ES6 focused snippets for optimizing modern Javascript development productivity.",
   "activationCommands": {
     "atom-text-editor": [
       "turbo-javascript:end-line",
@@ -11,7 +11,7 @@
       "turbo-javascript:wrap-block"
     ]
   },
-  "repository": "https://github.com/hharnisc/atom-turbo-javascript-2",
+  "repository": "https://github.com/hharnisc/atom-es6-javascript",
   "license": "MIT",
   "private": true,
   "keywords": [
