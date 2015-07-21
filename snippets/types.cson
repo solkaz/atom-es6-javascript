@@ -19,7 +19,7 @@
     body: "RegExp"
   "typeof":
     prefix: "tof"
-    body: "typeof ${1:source} === '${2:undefined}'"
+    body: """typeof ${1:source} === \"${2:undefined}\""""
   "instanceof":
     prefix: "iof"
     body: "${1:source} instanceof ${2:Object}"
