@@ -1,5 +1,7 @@
-# turbo-javascript
-A collection of commands and ES6-ready snippets for optimizing Javascript development productivity.
+# es6-javascript
+A collection of commands and ES6 focused snippets for optimizing modern Javascript development productivity.
+
+*Note: this is a fork of [turbo-javascript](extrabacon/atom-turbo-javascript) that uses arrow functions by default and adds a few more snippets for chai and classes for convenience.*
 
 ## Commands
 
@@ -27,32 +29,32 @@ For example, `.fe` renders a chain-friendly version of the forEach snippet, whil
 
 #### `v⇥` var statement
 ```js
-var ${1:name}
+var ${1:name};
 ```
 
-#### `v=⇥` var assignment
+#### `ve⇥` var assignment
 ```js
-var ${1:name} = ${2:value}
+var ${1:name} = ${2:value};
 ```
 
 #### `l⇥` let statement
 ```js
-let ${1:name}
+let ${1:name};
 ```
 
-#### `l=⇥` let assignment
+#### `le⇥` let assignment
 ```js
-let ${1:name} = ${2:value}
+let ${1:name} = ${2:value};
 ```
 
 #### `co⇥` const statement
 ```js
-const ${1:name}
+const ${1:name};
 ```
 
-#### `co=⇥` const assignment
+#### `coe⇥` const assignment
 ```js
-const ${1:name} = ${2:value}
+const ${1:name} = ${2:value};
 ```
 
 ### Flow Control
@@ -74,9 +76,9 @@ else {
 #### `ife⇥` else statement
 ```js
 if (${1:condition}) {
-  ${0}
+  ${2}
 } else {
-
+  ${3}
 }
 ```
 
@@ -89,8 +91,8 @@ else if (${1:condition}) {
 
 #### `fl⇥` for loop
 ```js
-for (var ${1:i} = 0, ${2:len} = ${3:iterable}.length; ${1:i} < ${2:len}; ${1:i}++) {
-  ${0}
+for (let ${1:i} = 0; ${1:i} < ${2:iterable}${3:.length}; ${1:i}++) {
+  ${4}
 }
 ```
 
@@ -120,29 +122,29 @@ while (${1:condition}) {
 #### `tc⇥` try/catch
 ```js
 try {
- ${0}
-} catch (${1:err}) {
-
+  ${1}
+} catch (${2:err}) {
+  ${3}
 }
 ```
 
 #### `tf⇥` try/finally
 ```js
 try {
- ${0}
+ ${1}
 } finally {
-
+ ${2}
 }
 ```
 
 #### `tcf⇥` try/catch/finally
 ```js
 try {
-  ${0}
-} catch (${1:err}) {
-
+  ${1}
+} catch (${2:err}) {
+  ${3}
 } finally {
-
+  ${4}
 }
 ```
 
@@ -162,7 +164,7 @@ function ${1:name}(${2:arguments}) {
 
 #### `iife⇥` immediately-invoked function expression (IIFE)
 ```js
-(function (${1:arguments}) {
+((${1:arguments}) => {
   ${0}
 })(${2});
 ```
@@ -212,35 +214,35 @@ function* ${1:name}(${1:arguments}) {
 
 #### `fe⇥` forEach loop (chainable)
 ```js
-${1:iterable}.forEach(function (${2:item}) {
+${1:iterable}.forEach((${2:item}) => {
   ${0}
 });
 ```
 
 #### `map⇥` map function (chainable)
 ```js
-${1:iterable}.map(function (${2:item}) {
+${1:iterable}.map((${2:item}) => {
   ${0}
 });
 ```
 
 #### `reduce⇥` reduce function (chainable)
 ```js
-${1:iterable}.reduce(function (${2:previous}, ${3:current}) {
+${1:iterable}.reduce((${2:previous}, ${3:current}) => {
   ${0}
 }${4:, initial});
 ```
 
 #### `filter⇥` filter function (chainable)
 ```js
-${1:iterable}.filter(function (${2:item}) {
+${1:iterable}.filter((${2:item}) => {
   ${0}
 });
 ```
 
 #### `find⇥` ES6 find function (chainable)
 ```js
-${1:iterable}.find(function (${2:item}) {
+${1:iterable}.find((${2:item}) => {
   ${0}
 });
 ```
@@ -266,14 +268,18 @@ class ${1:name} extends ${2:base} {
 }
 ```
 
-#### `:⇥` key/value pair
+#### `cf⇥` class function (ES6)
+
+```js
+{$1:name} ({$2:arguments}) {
+  ${0}
+}
+```
+
+#### `kv⇥` key/value pair
 Javascript:
 ```js
-${1:key}: ${2:'value'}
-```
-JSON:
-```json
-"${1:key}": ${2:"value"}
+${1:key}: ${2:"value"}
 ```
 
 #### `m⇥` method (ES6 syntax)
@@ -369,7 +375,7 @@ return new Promise((resolve, reject) => {
 
 #### `tof⇥` typeof comparison
 ```js
-typeof ${1:source} === '${2:undefined}'
+typeof ${1:source} === "${2:undefined}"
 ```
 
 #### `iof⇥` instanceof comparison
@@ -388,14 +394,14 @@ new Promise((resolve, reject) => {
 
 #### `then⇥` Promise.then (chainable)
 ```js
-${1:promise}.then(function (${2:value}) {
+${1:promise}.then((${2:value}) => {
   ${0}
 });
 ```
 
 #### `catch⇥` Promise.catch (chainable)
 ```js
-${1:promise}.catch(function (${2:err}) {
+${1:promise}.catch((${2:err}) => {
   ${0}
 });
 ```
@@ -409,31 +415,66 @@ export ${1:member};
 
 #### `im⇥` module import
 ```js
-import ${1:*} from '${2:module}';
+import ${1:*} from "${2:module}";
 ```
 
 #### `ima⇥` module import as
 ```js
-import ${1:*} as ${2:name} from '${3:module}';
+import ${1:*} as ${2:name} from "${3:module}";
+```
+
+#### `imn⇥` named module import
+```js
+import \{ ${1:name} \} from "${2:module}";
 ```
 
 ### BDD testing (Mocha, Jasmine, etc.)
 
 #### `desc⇥` describe
 ```js
-describe('${1:description}', function () {
+describe("${1:description}", () => {
   ${0}
 });
 ```
+
 #### `its⇥` synchronous "it"
 ```js
-it('${1:description}', function () {
+it("${1:description}", () => {
   ${0}
 });
 ```
+
 #### `ita⇥` asynchronous "it"
 ```js
-it('${1:description}', function (done) {
+it("${1:description}", (done) => {
+  ${0}
+});
+```
+
+#### `bef⇥` before
+```js
+before(() => {
+  ${0}
+});
+```
+
+#### `befe⇥` beforeEach
+```js
+beforeEach(() => {
+  ${0}
+});
+```
+
+#### `aft⇥` after
+```js
+after(() => {
+  ${0}
+});
+```
+
+#### `afte⇥` afterEach
+```js
+afterEach(() => {
   ${0}
 });
 ```
@@ -441,6 +482,11 @@ it('${1:description}', function (done) {
 ### Console
 
 #### `cl⇥` console.log
+```js
+console.log("${1:title}", ${2:$1}$0);
+```
+
+#### `cll⇥` console.log (text only)
 ```js
 console.log(${0});
 ```
@@ -459,21 +505,21 @@ console.warn(${0});
 
 #### `st⇥` setTimeout
 ```js
-setTimeout(function () {
+setTimeout(() => {
   ${0}
 }, ${1:delay});
 ```
 
 #### `si⇥` setInterval
 ```js
-setTimeout(function () {
+setTimeout(() => {
   ${0}
 }, ${1:delay});
 ```
 
 #### `sim⇥` setInterval
 ```js
-setImmediate(function () {
+setImmediate(() => {
   ${0}
 });
 ```
@@ -483,36 +529,36 @@ setImmediate(function () {
 
 #### `ae⇥` addEventListener
 ```js
-${1:document}.addEventListener('${2:event}', function (e) {
+${1:document}.addEventListener("${2:event}", function (e) {
   ${0}
 });
 ```
 
 #### `gi⇥` getElementById
 ```js
-${1:document}.getElementById('${2:id}')
+${1:document}.getElementById("${2:id}")
 ```
 
 #### `gc⇥` getElementsByClassName
 ```js
-Array.from(${1:document}.getElementsByClassName('${2:class}'))
+Array.from(${1:document}.getElementsByClassName("${2:class}"))
 ```
 `Array.from` polyfill required for ES5
 
 #### `gt⇥` getElementsByTagName
 ```js
-Array.from(${1:document}.getElementsByTagName('${2:tag}'))
+Array.from(${1:document}.getElementsByTagName("${2:tag}"))
 ```
 `Array.from` polyfill required for ES5
 
 #### `qs⇥` querySelector
 ```js
-${1:document}.querySelector('${2:selector}')
+${1:document}.querySelector("${2:selector}")
 ```
 
 #### `qsa⇥` querySelectorAll
 ```js
-Array.from(${1:document}.querySelectorAll('${2:selector}'))
+Array.from(${1:document}.querySelectorAll("${2:selector}"))
 ```
 `Array.from` polyfill required for ES5
 
@@ -520,12 +566,12 @@ Array.from(${1:document}.querySelectorAll('${2:selector}'))
 
 #### `cb⇥` Node.js style callback
 ```js
-function (err${1:, value}) {${0}}
+(err${1:, value}) => {${0}}
 ```
 
 #### `re⇥` require a module
 ```js
-require('${1:module}');
+require("${1:module}");
 ```
 
 #### `em⇥` export member
@@ -540,40 +586,18 @@ module.exports = ${1:name};
 
 #### `on⇥` attach an event handler (chainable)
 ```js
-${1:emitter}.on('${2:event}', function (${3:arguments}) {
+${1:emitter}.on("${2:event}", (${3:arguments}) => {
   ${0}
 });
-```
-
-#### `xm⇥` Express middleware
-```js
-function (req, res${1:, next}) {
-  ${0}
-}
-```
-
-#### `xerr⇥` Express error handler
-```js
-function (err, req, res, next) {
-  ${0}
-}
 ```
 
 ### Miscellaneous
 
 #### `us⇥` use strict
 ```js
-'use strict';
+"use strict";
 ```
 
 # License
 
 The MIT License (MIT)
-
-Copyright (c) 2014, Nicolas Mercier
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

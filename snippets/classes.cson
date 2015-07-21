@@ -18,3 +18,10 @@
     \t}
     }
     """
+  "class function":
+    prefix: "cf"
+    body: """
+    ${1:name} (${2:arguments}) {
+    \t${0}
+    }
+    """
