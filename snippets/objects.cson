@@ -1,7 +1,7 @@
 ".source.js":
   "key/value pair":
-    prefix: ":"
-    body: "${1:key}: ${2:'value'}"
+    prefix: "kv"
+    body: "${1:key}: ${2:value}"
   "method":
     prefix: "m"
     body: """
