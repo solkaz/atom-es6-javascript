@@ -5,10 +5,10 @@
   "description": "A collection of commands and ES6 focused snippets for optimizing modern Javascript development productivity.",
   "activationCommands": {
     "atom-text-editor": [
-      "turbo-javascript:end-line",
-      "turbo-javascript:end-line-comma",
-      "turbo-javascript:end-new-line",
-      "turbo-javascript:wrap-block"
+      "es6-javascript:end-line",
+      "es6-javascript:end-line-comma",
+      "es6-javascript:end-new-line",
+      "es6-javascript:wrap-block"
     ]
   },
   "repository": "https://github.com/hharnisc/atom-es6-javascript",

@@ -6,13 +6,13 @@ module.exports =
 
   activate: (state) ->
     atom.commands.add 'atom-text-editor',
-      'turbo-javascript:end-line': => @endLine(';', false)
+      'es6-javascript:end-line': => @endLine(';', false)
     atom.commands.add 'atom-text-editor',
-      'turbo-javascript:end-line-comma': => @endLine(',', false)
+      'es6-javascript:end-line-comma': => @endLine(',', false)
     atom.commands.add 'atom-text-editor',
-      'turbo-javascript:end-new-line': => @endLine('', true)
+      'es6-javascript:end-new-line': => @endLine('', true)
     atom.commands.add 'atom-text-editor',
-      'turbo-javascript:wrap-block': => @wrapBlock()
+      'es6-javascript:wrap-block': => @wrapBlock()
 
   endLine: (terminator, insertNewLine) ->
     editor = atom.workspace.getActiveTextEditor()
