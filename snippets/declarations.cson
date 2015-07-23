@@ -17,3 +17,6 @@
   "const assignment":
     prefix: "coe"
     body: "const ${1:name} = ${2:value};"
+  "const symbol":
+    prefix: "cos"
+    body: """const ${1:name} = Symbol("${1:name}");"""

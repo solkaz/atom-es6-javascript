@@ -57,6 +57,12 @@ const ${1:name};
 const ${1:name} = ${2:value};
 ```
 
+#### `cos⇥` const symbol
+```js
+const ${1:name} = Symbol("${1:name}");
+```
+
+
 ### Flow Control
 
 #### `if⇥` if statement
