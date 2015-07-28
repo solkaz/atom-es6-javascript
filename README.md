@@ -104,7 +104,7 @@ for (let ${1:i} = 0; ${1:i} < ${2:iterable}${3:.length}; ${1:i}++) {
 
 #### `fi⇥` for in loop
 ```js
-for (var ${1:key} in ${2:source}) {
+for (let ${1:key} in ${2:source}) {
   if (${2:source}.hasOwnProperty(${1:key})) {
     ${0}
   }
@@ -113,7 +113,7 @@ for (var ${1:key} in ${2:source}) {
 
 #### `fo⇥` for of loop (ES6)
 ```js
-for (var ${1:key} of ${2:source}) {
+for (let ${1:key} of ${2:source}) {
   ${0}
 }
 ```
