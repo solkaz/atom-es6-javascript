@@ -1,7 +1,7 @@
 {
   "name": "es6-javascript",
   "main": "./lib/es6-javascript",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "A collection of commands and ES6 focused snippets for optimizing modern Javascript development productivity.",
   "activationCommands": {
     "atom-text-editor": [
