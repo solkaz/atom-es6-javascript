@@ -1,5 +1,5 @@
 # es6-javascript
-A collection of commands and ES6 focused snippets for optimizing modern Javascript development productivity.
+A collection of commands and ES6 focused snippets for optimizing modern Javascript development productivity. It aims to be compliant with [AirBnB's mostly reasonable approach to Javascript](https://github.com/airbnb/javascript).
 
 *Note: this is a fork of [turbo-javascript](extrabacon/atom-turbo-javascript) that uses arrow functions by default and adds a few more snippets for chai and classes for convenience.*
 
@@ -277,7 +277,7 @@ class ${1:name} extends ${2:base} {
 #### `cf⇥` class function (ES6)
 
 ```js
-{$1:name} ({$2:arguments}) {
+{$1:name}({$2:arguments}) {
   ${0}
 }
 ```
