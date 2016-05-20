@@ -2,21 +2,21 @@
   "describe":
     prefix: "desc"
     body: """
-    describe("${1:description}", () => {
+    describe('${1:description}', () => {
     \t${0}
     });
     """
   "it asynchronous":
     prefix: "ita"
     body: """
-    it("${1:description}", (done) => {
+    it('${1:description}', (done) => {
     \t${0}
     });
     """
   "it synchronous":
     prefix: "its"
     body: """
-    it("${1:description}", () => {
+    it('${1:description}', () => {
     \t${0}
     });
     """
