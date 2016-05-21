@@ -3,6 +3,14 @@ A collection of commands and ES6 focused snippets for optimizing modern Javascri
 
 *Note: this is a fork of [turbo-javascript](extrabacon/atom-turbo-javascript) that uses arrow functions by default and adds a few more snippets for chai and classes for convenience.*
 
+## Changelog
+
+**Version 1.0.0**
+
+- Uses single quotes to comply with AirBnB guidelines
+
+If you need double quotes please downgrade `apm install es6-javascript@0.7.0`
+
 ## Commands
 
 Use the following keymaps to speed up your development. You can quickly terminate lines with semicolons or manipulate blocks of code with ease.
