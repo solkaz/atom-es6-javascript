@@ -59,7 +59,7 @@ const ${1:name} = ${2:value};
 
 #### `cos⇥` const symbol
 ```js
-const ${1:name} = Symbol("${1:name}");
+const ${1:name} = Symbol('${1:name}');
 ```
 
 
@@ -285,7 +285,7 @@ class ${1:name} extends ${2:base} {
 #### `kv⇥` key/value pair
 Javascript:
 ```js
-${1:key}: ${2:"value"}
+${1:key}: ${2:'value'}
 ```
 
 #### `m⇥` method (ES6 syntax)
@@ -381,7 +381,7 @@ return new Promise((resolve, reject) => {
 
 #### `tof⇥` typeof comparison
 ```js
-typeof ${1:source} === "${2:undefined}"
+typeof ${1:source} === '${2:undefined}'
 ```
 
 #### `iof⇥` instanceof comparison
@@ -421,38 +421,38 @@ export ${1:member};
 
 #### `im⇥` module import
 ```js
-import ${1:*} from "${2:module}";
+import ${1:*} from '${2:module}';
 ```
 
 #### `ima⇥` module import as
 ```js
-import ${1:*} as ${2:name} from "${3:module}";
+import ${1:*} as ${2:name} from '${3:module}';
 ```
 
 #### `imn⇥` named module import
 ```js
-import \{ ${1:name} \} from "${2:module}";
+import \{ ${1:name} \} from '${2:module}';
 ```
 
 ### BDD testing (Mocha, Jasmine, etc.)
 
 #### `desc⇥` describe
 ```js
-describe("${1:description}", () => {
+describe('${1:description}', () => {
   ${0}
 });
 ```
 
 #### `its⇥` synchronous "it"
 ```js
-it("${1:description}", () => {
+it('${1:description}', () => {
   ${0}
 });
 ```
 
 #### `ita⇥` asynchronous "it"
 ```js
-it("${1:description}", (done) => {
+it('${1:description}', (done) => {
   ${0}
 });
 ```
@@ -489,7 +489,7 @@ afterEach(() => {
 
 #### `cl⇥` console.log
 ```js
-console.log("${1:title}", ${2:$1}$0);
+console.log('${1:title}', ${2:$1}$0);
 ```
 
 #### `cll⇥` console.log (text only)
@@ -535,36 +535,36 @@ setImmediate(() => {
 
 #### `ae⇥` addEventListener
 ```js
-${1:document}.addEventListener("${2:event}", function (e) {
+${1:document}.addEventListener('${2:event}', function (e) {
   ${0}
 });
 ```
 
 #### `gi⇥` getElementById
 ```js
-${1:document}.getElementById("${2:id}")
+${1:document}.getElementById('${2:id}')
 ```
 
 #### `gc⇥` getElementsByClassName
 ```js
-Array.from(${1:document}.getElementsByClassName("${2:class}"))
+Array.from(${1:document}.getElementsByClassName('${2:class}'))
 ```
 `Array.from` polyfill required for ES5
 
 #### `gt⇥` getElementsByTagName
 ```js
-Array.from(${1:document}.getElementsByTagName("${2:tag}"))
+Array.from(${1:document}.getElementsByTagName('${2:tag}'))
 ```
 `Array.from` polyfill required for ES5
 
 #### `qs⇥` querySelector
 ```js
-${1:document}.querySelector("${2:selector}")
+${1:document}.querySelector('${2:selector}')
 ```
 
 #### `qsa⇥` querySelectorAll
 ```js
-Array.from(${1:document}.querySelectorAll("${2:selector}"))
+Array.from(${1:document}.querySelectorAll('${2:selector}'))
 ```
 `Array.from` polyfill required for ES5
 
@@ -577,7 +577,7 @@ Array.from(${1:document}.querySelectorAll("${2:selector}"))
 
 #### `re⇥` require a module
 ```js
-require("${1:module}");
+require('${1:module}');
 ```
 
 #### `em⇥` export member
@@ -592,7 +592,7 @@ module.exports = ${1:name};
 
 #### `on⇥` attach an event handler (chainable)
 ```js
-${1:emitter}.on("${2:event}", (${3:arguments}) => {
+${1:emitter}.on('${2:event}', (${3:arguments}) => {
   ${0}
 });
 ```
@@ -601,7 +601,7 @@ ${1:emitter}.on("${2:event}", (${3:arguments}) => {
 
 #### `us⇥` use strict
 ```js
-"use strict";
+'use strict';
 ```
 
 # License
