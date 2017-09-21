@@ -1,5 +1,5 @@
 {
-  "name": "es6-javascript",
+  "name": "es6-javascript-solkaz",
   "main": "./lib/es6-javascript",
   "version": "1.0.0",
   "description": "A collection of commands and ES6 focused snippets for optimizing modern Javascript development productivity.",
@@ -11,7 +11,7 @@
       "es6-javascript:wrap-block"
     ]
   },
-  "repository": "https://github.com/hharnisc/atom-es6-javascript",
+  "repository": "https://github.com/solkaz/atom-es6-javascript",
   "license": "MIT",
   "private": true,
   "keywords": [
